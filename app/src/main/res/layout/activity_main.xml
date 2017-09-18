@@ -9,48 +9,59 @@
     tools:layout_editor_absoluteY="81dp">
 
 
-
-
     <LinearLayout
         android:id="@+id/addPanle"
-        android:layout_width="match_parent"
+        android:layout_width="368dp"
         android:layout_height="271dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:ignore="MissingConstraints" >
+
+        app:layout_constraintBottom_toTopOf="@+id/listPanle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="16dp">
 
         <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:onClick="addBooks"
-            android:text="Add Books"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:text="Add Books" />
+
         <Button
-            android:onClick="addStudent"
-            android:text="Add Student"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:onClick="addStudent"
+            android:text="Add Student" />
     </LinearLayout>
 
 
     <LinearLayout
         android:id="@+id/listPanle"
-        android:layout_width="match_parent"
+        android:layout_width="368dp"
         android:layout_height="271dp"
         android:orientation="vertical"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="272dp" >
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addPanle"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="271dp">
 
         <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:onClick="listAllBooks"
-            android:text="print all Books"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:text="print all Books" />
+
         <Button
-            android:onClick="listAllStudents"
-            android:text="print all Student"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:onClick="listAllStudents"
+            android:text="print all Student" />
     </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>
